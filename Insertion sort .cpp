@@ -21,17 +21,22 @@ void solve()
     {
         cin>>m[i];
     }
+    //for i = 2 to A.length
     for(i=1; i<a; i++)
     {
+        // key = A[i]
         ll key=m[i];
+         // j = i - 1
         j=i-1;
+        // // Insert A [i] into the sorted sequence A[1.... i-1]
+ // while j>0 and A[j] > key
         while(j>=0 && m[j]>key)
         {
-            m[j+1]=m[j];
-            j--;
+            m[j+1]=m[j];// A[j+1] = A[j]
+            j--;// j = j - 1
 
         }
-        m[j+1]=key;
+        m[j+1]=key;// A[j + 1] = key
 
     }
     for(i=0; i<a; i++)
